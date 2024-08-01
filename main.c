@@ -1,5 +1,4 @@
 // main.c
-#include <unistd.h>  // For sleep()
 #include "sensor_interface.h"
 #include "sensor_evaluation.h"
 
