@@ -25,3 +25,12 @@ int sendOutput(PinConfig *pins, int result) {
     digitalWrite(pins->outputPin, result ? HIGH : LOW);
     return 0;
 }
+
+void cleanupPins(PinConfig *pins) {
+    digitalWrite(pins->outputPin, LOW);
+    
+    pinMode(pins->tempPin, INPUT);
+    pinMode(pins->pressPin, INPUT);
+    pinMode(pins->humidPin, INPUT);
+    pinMode(pins->outputPin, INPUT);  
+}
