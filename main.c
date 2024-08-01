@@ -1,17 +1,10 @@
+// main.c
 #include <unistd.h>  // For sleep()
 #include "sensor_interface.h"
-
-const int SENSOR_THRESHOLD = 2;
+#include "sensor_evaluation.h"
 
 int initialize(PinConfig *pins) {
     return initializePins(pins);
-}
-
-int evaluateSensorInput(SensorData data) {
-    int activeSensorCount = (data.tempReading > 0) +
-                            (data.pressReading > 0) +
-                            (data.humidReading > 0);
-    return activeSensorCount >= SENSOR_THRESHOLD;
 }
 
 int execute(PinConfig *pins) {
