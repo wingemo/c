@@ -27,8 +27,7 @@ int sendOutput(PinConfig *pins, int result) {
 }
 
 void cleanupPins(PinConfig *pins) {
-    digitalWrite(pins->outputPin, LOW);
-    
+    digitalWrite(pins->outputPin, LOW)
     pinMode(pins->tempPin, INPUT);
     pinMode(pins->pressPin, INPUT);
     pinMode(pins->humidPin, INPUT);
