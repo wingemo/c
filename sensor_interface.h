@@ -19,5 +19,6 @@ typedef struct {
 int initializePins(PinConfig *pins);
 SensorData readSensors(PinConfig *pins);
 int sendOutput(PinConfig *pins, int result);
+void cleanupPins(PinConfig *pins);
 
 #endif // SENSOR_INTERFACE_H
