@@ -10,8 +10,6 @@
  * @note This file should be used in conjunction with the corresponding implementation
  *       file (`sensor_control.c`) which provides the actual function definitions.
  * 
- * @date August 2024
- * @author [Your Name or Team]
  */
 
 #ifndef SENSOR_INTERFACE_H
