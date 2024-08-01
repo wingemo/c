@@ -59,12 +59,10 @@ int main() {
     if (initialize(&pins) != 0) {
         return 1;
     }
-
-    while (1) {
-        readSensors(&pins, &data);
-        sendOutput(&pins, evaluateSensorInput(&data));
-        sleep(INTERVAL);  // Vänta i 60 sekunder
-    }
+    
+    readSensors(&pins, &data);
+    sendOutput(&pins, evaluateSensorInput(&data));
+    sleep(INTERVAL);  // Vänta i 60 sekunder
 
     return 0;  // Denna rad kommer aldrig att nås på grund av den oändliga loopen
 }
