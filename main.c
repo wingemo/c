@@ -18,15 +18,7 @@ typedef struct {
 const int SENSOR_THRESHOLD = 2;
 
 int initialize(PinConfig pins) {
-    if (wiringPiSetup() == -1) {
-        fprintf(stderr, "WiringPi setup failed!\n");
-        return -1;
-    }
-    pinMode(pins.tempPin, INPUT);
-    pinMode(pins.pressPin, INPUT);
-    pinMode(pins.humidPin, INPUT);
-    pinMode(pins.outputPin, OUTPUT);
-    return 0;
+    return initializePins(pins);
 }
 
 SensorData readSensors(PinConfig pins) {
